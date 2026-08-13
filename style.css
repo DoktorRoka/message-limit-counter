@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 12px;
     right: 12px;
-    z-index: 999999; /* Повысили z-index, чтобы не перекрывалось шторками */
+    z-index: 999999;
     padding: 6px 12px;
     border-radius: 14px;
     font-size: 13px;
@@ -52,12 +52,15 @@
     margin-top: 6px;
 }
 
-
+/* ======================================================= */
+/* Мобильная версия: позиционирование в верхнем правом углу */
+/* ======================================================= */
 @media (max-width: 768px) {
     #mlc-badge {
-        
-        bottom: calc(80px + env(safe-area-inset-bottom, 0px));
-        right: 10px;
+        bottom: auto;
+        top: calc(10px + env(safe-area-inset-top, 0px));
+        /* right: 60px — отступ справа, чтобы не перекрывать кнопку вызова правого меню */
+        right: 60px;
         font-size: 11px;
         padding: 4px 8px;
         border-radius: 10px;
