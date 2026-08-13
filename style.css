@@ -1,0 +1,53 @@
+#mlc-badge {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    z-index: 9999;
+    padding: 6px 12px;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    pointer-events: none;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+#mlc-badge.mlc-ok {
+    background: rgba(46, 125, 50, 0.85);
+}
+
+#mlc-badge.mlc-warn {
+    background: rgba(245, 124, 0, 0.9);
+}
+
+#mlc-badge.mlc-danger {
+    background: rgba(198, 40, 40, 0.95);
+    animation: mlc-pulse 1s infinite;
+}
+
+@keyframes mlc-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+#mlc-settings label {
+    display: block;
+    margin: 6px 0;
+}
+
+#mlc-settings input[type="number"] {
+    width: 80px;
+    margin-left: 6px;
+}
+
+#mlc-settings .mlc-hint {
+    font-size: 12px;
+    opacity: 0.75;
+    margin-top: 6px;
+}
