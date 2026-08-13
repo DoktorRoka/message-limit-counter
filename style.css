@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 12px;
     right: 12px;
-    z-index: 9999;
+    z-index: 999999; /* Повысили z-index, чтобы не перекрывалось шторками */
     padding: 6px 12px;
     border-radius: 14px;
     font-size: 13px;
@@ -50,4 +50,16 @@
     font-size: 12px;
     opacity: 0.75;
     margin-top: 6px;
+}
+
+
+@media (max-width: 768px) {
+    #mlc-badge {
+        
+        bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+        right: 10px;
+        font-size: 11px;
+        padding: 4px 8px;
+        border-radius: 10px;
+    }
 }
